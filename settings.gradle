@@ -1,0 +1,39 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+    }
+    resolutionStrategy {
+        eachPlugin {
+            if (requested.id.id == "ru.netris.commitlint") {
+                useModule("ru.netris:commitlint-plugin:${requested.version}")
+            }
+        }
+    }
+}
+
+buildCache {
+    local {
+        enabled = true
+    }
+}
+
+rootProject.name = 'sunmao'
+include ":base",
+        ":shanhai",
+        ":flowable",
+        ":mail",
+        ":storage-api",
+        ":boot"
+
+// 基础
+project(':base').projectDir = "$rootDir/base" as File
+// 存储服务接口
+project(':storage-api').projectDir = "$rootDir/storage-api" as File
+// 建模
+project(':shanhai').projectDir = "$rootDir/shanhai" as File
+// 工作流
+project(':flowable').projectDir = "$rootDir/flowable" as File
+// 日历
+project(':mail').projectDir = "$rootDir/mail" as File
+// 启动
+project(':boot').projectDir = "$rootDir/boot" as File

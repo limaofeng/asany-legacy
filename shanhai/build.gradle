@@ -1,0 +1,24 @@
+description = "自定义建模"
+
+apply plugin: 'org.hibernate.orm'
+apply plugin: 'jacoco'
+
+hibernate {
+    enhance {
+        enableLazyInitialization = true
+        enableDirtyTracking = true
+        enableAssociationManagement = true
+        enableExtendedEnhancement = false
+    }
+}
+
+dependencies {
+//    implementation project(":ui")
+    implementation project(":storage-api")
+    implementation "com.hankcs:hanlp:${LIB_HANLP_VER}"
+    compileOnly "org.projectlombok:lombok:${LIB_LOMBOK_VER}"
+    annotationProcessor "org.projectlombok:lombok:$LIB_LOMBOK_VER"
+    testCompileOnly "org.projectlombok:lombok:${LIB_LOMBOK_VER}"
+    testAnnotationProcessor "org.projectlombok:lombok:$LIB_LOMBOK_VER"
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}

@@ -1,0 +1,10 @@
+description "基础模块：包含公共引用工具包与第三方接口"
+
+dependencies {
+    implementation project(":storage-api")
+    compileOnly "org.projectlombok:lombok:${LIB_LOMBOK_VER}"
+    annotationProcessor "org.projectlombok:lombok:$LIB_LOMBOK_VER"
+    testCompileOnly "org.projectlombok:lombok:${LIB_LOMBOK_VER}"
+    testAnnotationProcessor "org.projectlombok:lombok:$LIB_LOMBOK_VER"
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
