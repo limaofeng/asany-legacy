@@ -8,6 +8,7 @@ import cn.asany.shanhai.core.support.model.IModelFeature;
 import java.util.ArrayList;
 import java.util.Optional;
 import lombok.extern.slf4j.Slf4j;
+import org.jfantasy.framework.dao.jpa.PropertyFilter;
 import org.jfantasy.framework.util.common.ObjectUtil;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -39,7 +40,7 @@ class ModelServiceTest {
 
   @Test
   public void contextLoads() {
-    modelService.findPage(PageRequest.of(0, 5), new ArrayList<>());
+    modelService.findPage(PageRequest.of(0, 5), PropertyFilter.newFilter());
   }
 
   private Model testEmployee() {
