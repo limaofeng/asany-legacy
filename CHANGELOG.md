@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.0.1 (2024-04-25)
+
+
+### Features
+
+* 代码迁移到单独的仓库 ([46dc400](https://github.com/limaofeng/asany-legacy/commit/46dc4001b8703e9756c16981afcc4d40cbdbf73d))
+* 解决一些配置问题 ([22e8b7c](https://github.com/limaofeng/asany-legacy/commit/22e8b7c2ead0338273f72f88bf0e9eb2dde125e9))
+
 ### [0.2.37](https://github.com/limaofeng/asany-server/compare/v0.2.36...v0.2.37) (2024-04-17)
 
 ### [0.2.36](https://github.com/limaofeng/asany-server/compare/v0.2.35...v0.2.36) (2024-04-16)
