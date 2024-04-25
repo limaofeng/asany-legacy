@@ -68,8 +68,8 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            limaofeng/asany-server:latest
-            limaofeng/asany-server:${{ env.RELEASE_VERSION }}
+            limaofeng/asany-legacy:latest
+            limaofeng/asany-legacy:${{ env.RELEASE_VERSION }}
 
   github-release:
     needs: build
