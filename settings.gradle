@@ -17,7 +17,7 @@ buildCache {
     }
 }
 
-rootProject.name = 'sunmao'
+rootProject.name = 'asany-legacy'
 include ":base",
         ":shanhai",
         ":flowable",
