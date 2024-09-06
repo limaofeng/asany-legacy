@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.3](https://github.com/limaofeng/asany-legacy/compare/v1.0.2...v1.0.3) (2024-09-06)
+
+
+### Features
+
+* 添加一些默认配置，当环境变量缺失时。避免出错 ([764a2ba](https://github.com/limaofeng/asany-legacy/commit/764a2baef2f1b3f79742f09399a6e962d966765f))
+
 ### [1.0.2](https://github.com/limaofeng/asany-legacy/compare/v1.0.1...v1.0.2) (2024-04-25)
 
 ### 1.0.1 (2024-04-25)
