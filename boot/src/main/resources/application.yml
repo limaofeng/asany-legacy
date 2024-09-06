@@ -160,26 +160,27 @@ management:
       enabled: false
 
 cuckoo:
- rebuild: false
- elasticsearch:
-   client:
-     url: ${ELASTIC_URL}
-     api-key: ${ELASTIC_API}
-     ssl:
-       certificate-path: ${ELASTIC_CERTIFICATE_PATH}
-        
+  enable: ${CUCKOO_ENABLE:false}
+  rebuild: false
+  elasticsearch:
+    client:
+      url: ${ELASTIC_URL:https://elasticsearch:9200}
+      api-key: ${ELASTIC_API:TnVEeEZaQUJRY3U0Y3lvdU5USk06VW02WDhCX0JUN2FsZTRVd1VpVFIzQQ==}
+      ssl:
+        certificate-path: ${ELASTIC_CERTIFICATE_PATH:/app/es/ca.crt}
+
 openim:
- url: ${OPENIM_SERVER}
- secret: ${OPENIM_SECRET}
- admin:
-   user: ${OPENIM_ADMIN}
+  url: ${OPENIM_SERVER:http://openim:10002}
+  secret: ${OPENIM_SECRET:123456}
+  admin:
+    user: ${OPENIM_ADMIN:openIMAdmin}
 
 sms:
- provider:
-   aliyun:
-     accessKeyId: ${ALIYUN_ACCESSKEY_ID}
-     accessKeySecret: ${ALIYUN_ACCESSKEY_SECRET}
+  provider:
+    aliyun:
+      accessKeyId: ${ALIYUN_ACCESSKEY_ID:0000011}
+      accessKeySecret: ${ALIYUN_ACCESSKEY_SECRET:0000011}
 
 james:
   filesystem:
-    workingDirectory: ${JAMES_FILESYSTEM_WORKING_DIRECTORY}
+    workingDirectory: ${JAMES_FILESYSTEM_WORKING_DIRECTORY:/app/james}
